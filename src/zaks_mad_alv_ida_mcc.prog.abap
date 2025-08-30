@@ -157,10 +157,8 @@ ENDMODULE.
 *----------------------------------------------------------------------*
 MODULE user_command_0100 INPUT.
   CASE sy-ucomm.
-    WHEN 'CANC'.
+    WHEN 'CANC' OR 'EXIT'.
       LEAVE PROGRAM.
-    WHEN 'EXIT'.
-      LEAVE TO TRANSACTION 'EXIT'.
     WHEN 'BACK'.
       LEAVE TO SCREEN 0.
   ENDCASE.
