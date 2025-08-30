@@ -59,12 +59,12 @@ MODULE status_0100 OUTPUT.
         EXPORTING
             iv_title = 'Material Details of selected Material Group' ).
 
-  TRY.
-      CALL METHOD lo_alv->set_maximum_number_of_rows
-        EXPORTING
-          iv_number_of_rows = 50.
-    CATCH cx_salv_param_out_of_bounds.
-  ENDTRY.
+*  TRY.
+*      CALL METHOD lo_alv->set_maximum_number_of_rows
+*        EXPORTING
+*          iv_number_of_rows = 50.
+*    CATCH cx_salv_param_out_of_bounds.
+*  ENDTRY.
 
   DATA(lo_fcat) = lo_alv->field_catalog( ).
   lo_fcat->set_available_fields(
